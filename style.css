@@ -1,0 +1,76 @@
+body{
+	background-color: #E2EED4;
+	font-family: "Helvetica";
+	color: #0A344D;
+}
+h1{
+	text-align: center;
+	font-size: 6em;
+	margin-bottom: 1vh;
+}
+h6{
+	text-align: center;
+	font-size: 1em;
+}
+
+h4{
+	text-align: center;
+	font-size: 3em;
+}
+
+
+nav{
+	margin: 3em;
+}
+
+ul{
+	list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+	align-items: center;
+}
+
+.prijzen{
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	flex-wrap: wrap;
+}
+
+ .prijs1{
+ 	order: 2;
+	width: 30vw;
+	border-radius: 25px;
+	text-align: center;
+	background-color: #75B953;
+}
+
+ .prijs2{
+ 	order: 1;
+	width: 20vw;
+	border-radius: 25px;
+	text-align: center;
+	background-color: #A6CE89;
+}
+
+ .prijs3{
+ 	order: 3;
+	width: 20vw;
+	border-radius: 25px;
+	text-align: center;
+	background-color: #A6CE89;
+}
+
+
+
+li a {
+	text-decoration: none;
+	color: #4F7CAC;
+	font-size: 2em;
+}
+
+li a:hover{
+	color: #626E82;
+	font-size: 2.5em;
+}
