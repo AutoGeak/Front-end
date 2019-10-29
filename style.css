@@ -1,76 +1,226 @@
-body{
-	background-color: #E2EED4;
-	font-family: "Helvetica";
-	color: #0A344D;
-}
-h1{
-	text-align: center;
-	font-size: 6em;
-	margin-bottom: 1vh;
-}
-h6{
-	text-align: center;
-	font-size: 1em;
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,700&display=swap');
+
+body {
+  background: #FCF8F0;
+  font-family: 'Roboto', sans-serif;
 }
 
-h4{
-	text-align: center;
-	font-size: 3em;
+h1 {
+  color: #41719F;
+}
+
+a{
+  text-decoration: none;
+}
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+.section {
+  margin-top: 60px;
+}
+
+.intro-title {
+  color: #41719F;
+  font-size: 20px;
+}
+
+.intro-par {
+  color: #8DCCFC;
+  margin-top: 10px;
+}
+
+.header {
+  text-align: center;
+  position: relative;
+}
+
+.header p{
+  color: #41719F;
+}
+
+.nav {
+  display:flex;
+  justify-content: space-around;
+}
+
+.nav a{
+  color:#A0BED0;
+  text-decoration: none;
+}
+
+.nav a:hover {
+  color:#41719F;
+}
+
+.hero {
+  margin: 40px auto;
+  display: flex;
+  justify-content: space-around;
+  max-width: 75%;
+  align-items: center;
+}
+
+.hero--info {
+  color: #8DCCFC;
+}
+
+.hero--img {
+  width: 200%;
+  height: auto;
+}
+
+.hero p, h2, h3 {
+  margin: 0;
+  padding: 0;
 }
 
 
-nav{
-	margin: 3em;
+
+.hero img {
+  padding-right: 20px;
 }
 
-ul{
-	list-style-type: none;
+
+.prices--card-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.prices--card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 20px;
+  margin-top: 20px;
+  text-align: center;
+  border-radius: 30px;
+  color: #fff;
+}
+
+.prices--card h3 {
+  font-size: 30px;
+}
+
+.prices--card h2 {
+  font-size: 40px;
+}
+
+.prices--card-small {
+  width: 250px;
+  height: 250px;
+  background:#8DCCFC;
+}
+
+.prices--card-big {
+  width: 300px;
+  height: 300px;
+  background:#41719F;
+}
+
+.prices--link {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.prices--link-tablet {
+  display: none;
+}
+
+.prices--link a {
+  color:#41719F;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.benefit--row-container {
+  padding-left: 40px;
+}
+
+.benefit--row {
+  display: flex;
+  justify-content: space-around;
+  margin: 0 auto;
+  align-items: center;
+}
+
+.benefit--row p {
+  color: #8DCCFC;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.benefit--content {
+  display:none;
+}
+.benefit--content-active {
+  display: block;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact--input {
+  margin-top: 20px;
+  padding: 10px;
+  border-radius: 20px;
+  border: 2px solid #A0BED0;
+  background: transparent;
+}
+
+.contact-btn {
+  margin-right: auto;
+  margin-top: 20px;
+  background: #8DCCFC;
+  border-radius: 50px;
+  padding: 10px 30px;
+  font-weight: bold;
+}
+
+
+@media (min-width: 768px) and (hedth: 1024px) {
+  .prices-mobile-header {
     display: flex;
-    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .prices-card-smal-container {
+    display: flex;
     justify-content: space-around;
-	align-items: center;
+    width: 100%;
+  }
+
+  .prices--link-tablet {
+    display: flex;
+    align-items: center;
+  }
+
+  .prices--link {
+    display: none;
+  }
+
+  .contact-form {
+    width: 60%;
+    margin: 0 auto;
+  }
+
+  .intro-par {
+    width: 60%;
+    margin: 0 auto;
+  }
 }
 
-.prijzen{
-	display: flex;
-	justify-content: space-around;
-	align-items: center;
-	flex-wrap: wrap;
-}
-
- .prijs1{
- 	order: 2;
-	width: 30vw;
-	border-radius: 25px;
-	text-align: center;
-	background-color: #75B953;
-}
-
- .prijs2{
- 	order: 1;
-	width: 20vw;
-	border-radius: 25px;
-	text-align: center;
-	background-color: #A6CE89;
-}
-
- .prijs3{
- 	order: 3;
-	width: 20vw;
-	border-radius: 25px;
-	text-align: center;
-	background-color: #A6CE89;
-}
-
-
-
-li a {
-	text-decoration: none;
-	color: #4F7CAC;
-	font-size: 2em;
-}
-
-li a:hover{
-	color: #626E82;
-	font-size: 2.5em;
+@media (min-width: 1024px) and (max-width: 1280px) {
+  body {
+    
+  }
 }

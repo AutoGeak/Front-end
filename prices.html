@@ -1,0 +1,64 @@
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="./style.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  </head>
+  <body>
+
+
+   <div class="container">
+     <div class="header">
+     <a href="index.html"><h1>Motor Staling</h1></a>
+      <p>Diemen</p>
+    </div>
+
+     <div class="prices section" id="prices">
+      <div class="prices-mobile-header">
+        <div class="intro-title">
+          <h2>prijzen</h2>
+        </div>
+        <div class="prices--link-tablet">
+            <a href="#">Bekijk alle pakketten</a>
+            <img src="https://img.icons8.com/metro/26/000000/chevron-right.png">
+        </div>
+      </div>
+      <div class="prices--card-container">
+      <div class="prices--card prices--card-big">
+        <h3>12 maanden</h3>
+        <h2>40</h2>
+        <p>per maand</p>
+        <h3>Bespaar</h3>
+        <p>Totaal 400</p>
+      </div>
+      <div class="prices-card-smal-container">
+        <div class="prices--card prices--card-small">
+          <h3>12 maanden</h3>
+          <h2>40</h2>
+          <p>per maand</p>
+          <h3>Bespaar</h3>
+          <p>Totaal 400</p>
+        </div>
+
+        <div class="prices--card prices--card-small">
+          <h3>12 maanden</h3>
+          <h2>40</h2>
+          <p>per maand</p>
+          <h3>Bespaar</h3>
+          <p>Totaal 400</p>
+        </div>
+      </div>
+    </div>
+    </div>
+
+  </div>
+  </body>
+
+  <script>
+    $(document).ready(function(){
+    $(".benefit--row").click(function() {
+      $( ".benefit--content" ).toggle("benefit--content-show");
+    });
+  });
+  </script>
+</html>
