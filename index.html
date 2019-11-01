@@ -2,6 +2,7 @@
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="./style.css" rel="stylesheet">
+    <script src="./main.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   </head>
   <body>
@@ -12,9 +13,9 @@
       <h1>Motor Staling</h1>
       <p>Diemen</p>
       <div class="nav">
-        <a href="#prices">Prijzen</a>
-        <a href="#benefit">Voordelen</a>
-        <a href="#contact">Contact</a>
+        <a id="price-btn" onclick="scrollToPrices()" >Prijzen</button>
+        <a id="benefit-btn" onclick="scrollToBenefits()" >Voordelen</button>
+        <a id="contact-btn" onclick="scrollToContact()" >Contact</button>
       </div>
     </div>
 
@@ -24,7 +25,7 @@
       </div>
       <div class="hero--info">
         <p>al vanaf</p>
-        <h2>40</h2>
+        <h2>&#8364;40</h2>
         <p>per maand</p>
       </div>
      </div>
@@ -35,12 +36,12 @@
      <div class="prices section" id="prices">
       <div class="prices-mobile-header">
         <div class="intro-title">
-          <h2>prijzen</h2>
+          <h2>Prijzen</h2>
         </div>
-        <div class="prices--link-tablet">
+<!--         <div class="prices--link-tablet">
             <a href="prices.html">Bekijk alle pakketten</a>
             <img src="https://img.icons8.com/metro/26/000000/chevron-right.png">
-        </div>
+        </div> -->
       </div>
       <div class="prices--card-container">
       <div class="prices--card prices--card-big">
@@ -50,7 +51,6 @@
         <h3>Bespaar</h3>
         <p>Totaal 400</p>
       </div>
-      <div class="prices-card-smal-container">
         <div class="prices--card prices--card-small">
           <h3>12 maanden</h3>
           <h2>40</h2>
@@ -66,14 +66,14 @@
           <h3>Bespaar</h3>
           <p>Totaal 400</p>
         </div>
-      </div>
     </div>
-      <div class="prices--link">
+
+    <!--    <div class="prices--link">
         <a href="prices.html">Bekijk alle pakketten</a>
         <img src="https://img.icons8.com/metro/26/000000/chevron-right.png">
-      </div>
+      </div> -->
      </div>
-
+ 
 
      <div class="benefit section" id="benefit">
        <div class="intro-title">
@@ -82,7 +82,7 @@
       <div class="benefit--container">
       <div class="benefit--row-container">
         <div class="benefit--row">
-          <p>lorem ipsum</p>
+          <p>Goedgekeurd door verzekering</p>
           <img src="https://img.icons8.com/android/24/000000/chevron-down.png">
         </div>
         <div class="benefit--content benefit--content-hide">
@@ -94,7 +94,7 @@
 
       <div class="benefit--row-container">
           <div class="benefit--row">
-            <p>lorem ipsum</p>
+            <p>24/7 Camera toezicht</p>
             <img src="https://img.icons8.com/android/24/000000/chevron-down.png">
           </div>
           <div class="benefit--content benefit--content-hide">
@@ -104,7 +104,7 @@
 
         <div class="benefit--row-container">
           <div class="benefit--row">
-            <p>lorem ipsum</p>
+            <p>Ankerpunt aan de muur</p>
             <img src="https://img.icons8.com/android/24/000000/chevron-down.png">
           </div>
           <div class="benefit--content benefit--content-hide">
@@ -114,7 +114,7 @@
 
           <div class="benefit--row-container">
             <div class="benefit--row">
-              <p>lorem ipsum</p>
+              <p>Extra beveiliging tegen diefstal</p>
               <img src="https://img.icons8.com/android/24/000000/chevron-down.png">
             </div>
             <div class="benefit--content benefit--content-hide">
@@ -124,7 +124,7 @@
 
           <div class="benefit--row-container">
             <div class="benefit--row">
-              <p>lorem ipsum</p>
+              <p>Bescherming tegen het weer</p>
               <img src="https://img.icons8.com/android/24/000000/chevron-down.png">
             </div>
             <div class="benefit--content benefit--content-hide">
@@ -134,13 +134,14 @@
         </div>
      </div>
 
+     <button id="appearContactBtn" onclick="showContact()">Contact</button>
 
-     <div class="contact section" id="contact">
+     <div class="contact section" id="contact">	
         <div class="intro-title">
           <h2>Contact</h2>
         </div>
         <div class="intro-par">
-            In dui magna, posuere eget, vestibulum et, tempor auctor, justo. Vestibulum ullamcorper mauris at ligula. Donec elit libero, sodales nec, volutpat a, suscipit non, turpis. Quisque id odio.
+            Heeft u interesse of nog vragen? Vul dan hier de gegevens in en dan nemen wij z.s.m contact met u op.
         </div>
         <form class="contact-form">
           <input placeholder="Uw naam..." name="name" class="contact--input" id="nameInput" type="text" required/>
@@ -153,59 +154,4 @@
    </div>
   </div>
   </body>
-
-  <script>
-    $(document).ready(function(){
-      
-
-    $(".benefit--row").click(function() {
-      var content = $(this).next();
-      $(content).toggle();
-      $(content).next().toggle();
-      return false;
-    });
-
-
-    $('.contact-form').on('submit', function(e){
-        e.preventDefault();
-        var nameVal = $('#nameInput').val();
-        var emailVal = $('#emailInput').val();
-        var phoneVal = $('#phoneInput').val();
-        var notesVal = $('#notesInput').val();
-
-        var hasNumber = /\d/;
-        if(hasNumber.test(nameVal)) {
-          $("#nameInput").css("color", "red");
-          return
-        }
-        else {
-          $("#nameInput").css("color", "black");
-        }
-
-        if(emailVal.includes("@") && emailVal.includes(".")) {
-          $("#emailInput").css("color", "black");
-        }
-        else {
-          $("#emailInput").css("color", "red");
-          return
-        } 
-       
-        if(isNaN(phoneVal)) {
-          $("#phoneInput").css("color", "red");
-          return
-        }
-        else {
-          $("#phoneInput").css("color", "black");
-        }
-
-        if(nameVal !== '' && emailVal !== '' && phoneVal !== '' && notesVal !== '') {
-          $('.contact-btn').css('background', '#41719F');
-          $('.contact-btn').css('color', '#fff');
-          $(".contact-btn").val("Verstuurd");
-        }
-
-    });
-
-  });
-  </script>
 </html>

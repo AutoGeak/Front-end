@@ -5,8 +5,13 @@ body {
   font-family: 'Roboto', sans-serif;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 h1 {
   color: #41719F;
+  font-size: 3em;
 }
 
 a{
@@ -20,26 +25,51 @@ a{
 }
 
 .section {
-  margin-top: 60px;
+  padding-top: 100px;
+}
+
+.show {
+  display: block !important;
+}
+
+.hide {
+  display: none;
 }
 
 .intro-title {
   color: #41719F;
-  font-size: 20px;
+  font-size: 2em;
+  margin-left: 30px;
+  margin-bottom: 50px;
 }
 
 .intro-par {
   color: #8DCCFC;
-  margin-top: 10px;
+  margin: 0 auto;
+  width: 90%;
 }
 
 .header {
   text-align: center;
-  position: relative;
+  position: fixed;
+  width: 100%;
+  background-color: #8DCCFC;
+  left:0;
+  top:0;
+  z-index: 100;
+  padding-bottom: 20px;
 }
+
+.header h1{
+  margin-bottom: 0;
+}
+  
 
 .header p{
   color: #41719F;
+  margin-top: 0px;
+  margin-bottom: 10px;
+  font-size: 1em;
 }
 
 .nav {
@@ -48,8 +78,13 @@ a{
 }
 
 .nav a{
-  color:#A0BED0;
+  color:#FCF8F0;
   text-decoration: none;
+  font-size: 1.5em;
+}
+
+.nav a:active {
+  color: yellow;
 }
 
 .nav a:hover {
@@ -59,13 +94,24 @@ a{
 .hero {
   margin: 40px auto;
   display: flex;
+  flex-direction: column;
   justify-content: space-around;
-  max-width: 75%;
+  max-width: 600px;
   align-items: center;
+  position: relative; 
+  margin-top: 200px;
 }
 
 .hero--info {
   color: #8DCCFC;
+  display: flex;
+  align-items: center;
+  margin-top: 50px;
+  font-size: 2em;
+}
+
+.hero--info h2{
+  margin: 0px 1vw;
 }
 
 .hero--img {
@@ -81,7 +127,8 @@ a{
 
 
 .hero img {
-  padding-right: 20px;
+  width: 100%;
+  height: auto;
 }
 
 
@@ -89,6 +136,7 @@ a{
   display: flex;
   flex-direction: column;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 .prices--card {
@@ -96,7 +144,7 @@ a{
   flex-direction: column;
   justify-content: center;
   padding: 20px;
-  margin-top: 20px;
+  margin: 20px;
   text-align: center;
   border-radius: 30px;
   color: #fff;
@@ -111,14 +159,14 @@ a{
 }
 
 .prices--card-small {
-  width: 250px;
-  height: 250px;
+  min-width: 250px;
+  min-height: 250px;
   background:#8DCCFC;
 }
 
 .prices--card-big {
-  width: 300px;
-  height: 300px;
+  min-width: 300px;
+  min-height: 300px;
   background:#41719F;
 }
 
@@ -145,7 +193,7 @@ a{
 
 .benefit--row {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   margin: 0 auto;
   align-items: center;
 }
@@ -163,10 +211,16 @@ a{
   display: block;
 }
 
+.contact {
+  display: none;
+}
+
 .contact-form {
   display: flex;
   flex-direction: column;
-}
+  margin: 0 auto;
+  width: 90%;
+  }
 
 .contact--input {
   margin-top: 20px;
@@ -176,22 +230,70 @@ a{
   background: transparent;
 }
 
-.contact-btn {
-  margin-right: auto;
-  margin-top: 20px;
+#appearContactBtn {
+  margin:100px auto;
+  display:block;
+  font-size: 3em;
+  color: #FCF8F0;
+  border: none;
   background: #8DCCFC;
-  border-radius: 50px;
-  padding: 10px 30px;
+  border-radius: 70px;
+  padding: 30px 90px;
   font-weight: bold;
 }
 
+.benefit--container{
+  width: 100%;
+  margin: auto;
+}
 
-@media (min-width: 768px) and (hedth: 1024px) {
-  .prices-mobile-header {
+@media (min-width: 768px) and (max-width: 1024px) {
+
+  h1 {
+  font-size: 3.5em;
+}
+
+.header p{
+  font-size: 1.25em;
+}
+
+.hero--info {
+  display: block;
+  margin-top: 0px;
+}
+
+.hero--info h2{
+  margin: 0;
+  font-size: 3em;
+}
+.nav a{
+  font-size: 1.75em;
+}
+
+.contact-form {
+  width: 70%;
+  }
+
+.benefit--container{
+  width: 80%;
+  margin: auto;
+}
+
+.intro-title {
+  font-size: 2.5em;
+}
+
+.prices-mobile-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
   }
+
+    .prices--card-container {
+      flex-direction: row;
+      justify-content: space-around;
+  }
+
 
   .prices-card-smal-container {
     display: flex;
@@ -208,19 +310,70 @@ a{
     display: none;
   }
 
-  .contact-form {
-    width: 60%;
-    margin: 0 auto;
-  }
-
   .intro-par {
-    width: 60%;
+    width: 70%;
     margin: 0 auto;
+  }
+
+  .hero {
+    flex-direction: row;
+    margin-top: 250px;
+    max-width: 500px;
   }
 }
 
-@media (min-width: 1024px) and (max-width: 1280px) {
-  body {
-    
+@media screen and (min-width: 1024px) {
+  .header p{
+  font-size: 1.5em;
+}
+
+.benefit--container{
+  width: 60%;
+  margin: auto;
+}
+
+.contact-form {
+  width: 40%;
+  }
+
+.intro-title {
+  font-size: 3em;
+}
+
+.intro-par {
+  width: 40%;
+  margin: 0 auto;
+  }
+
+.hero--info {
+  display: block;
+  margin-top: 0px;
+}
+
+.hero--info h2{
+  margin: 0;
+  font-size: 4em;
+}
+
+.hero {
+    flex-direction: row;
+    margin-top: 275px;
+  }
+    h1 {
+  font-size: 4em;
+}
+
+.nav a{
+  font-size: 2em;
+}
+    .prices--card-container {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .prices-card-smal-container {
+    display: flex;
+    flex-direction: row;
   }
 }
+
