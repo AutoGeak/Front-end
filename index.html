@@ -1,157 +1,146 @@
 <html>
-  <head>
+
+<head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="./style.css" rel="stylesheet">
-    <script src="./main.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  </head>
-  <body>
 
+</head>
 
-   <div class="container">
-     <div class="header">
-      <h1>Motor Staling</h1>
-      <p>Diemen</p>
-      <div class="nav">
-        <a id="price-btn" onclick="scrollToPrices()" >Prijzen</button>
-        <a id="benefit-btn" onclick="scrollToBenefits()" >Voordelen</button>
-        <a id="contact-btn" onclick="scrollToContact()" >Contact</button>
-      </div>
-    </div>
+<body>
 
-     <div class="hero">
-      <div class="hero--image">
-        <img src="motor.png"/>
-      </div>
-      <div class="hero--info">
-        <p>al vanaf</p>
-        <h2>&#8364;40</h2>
-        <p>per maand</p>
-      </div>
-     </div>
+    <section class="container">
+        <header class="header">
+            <h1>Motor Staling</h1>
+            <p>Diemen</p>
+            <nav class="nav">
+                <a id="price-btn" onclick="scrollToPrices()">Prijzen</a>
+                <a id="benefit-btn" onclick="scrollToBenefits()">Voordelen</a>
+                <a id="contact-btn" onclick="scrollToContact()">Contact</a>
+            </nav>
+        </header>
 
+        <section class="hero">
+            <section class="hero--image">
+                <img src="motor.png" />
+            </section>
+            <section class="hero--info">
+                <p>al vanaf</p>
+                <h2>&#8364;40</h2>
+                <p>per maand</p>
+            </section>
+        </section>
 
+        <section class="prices section" id="prices">
+            <section class="prices-mobile-header">
+                <section class="intro-title">
+                    <h2>Prijzen</h2>
+                </section>
+            </section>
+            <section class="prices--card-container">
+                <a href="prices.html?pakket1" class="prices--card prices--card-big">
+                    <h3>12 maanden</h3>
+                    <h2>40</h2>
+                    <p>per maand</p>
+                    <h3>Bespaar</h3>
+                    <p>Totaal 400</p>
+                </a>
+                <a href="prices.html?pakket2" class="prices--card prices--card-small">
+                    <h3>12 maanden</h3>
+                    <h2>40</h2>
+                    <p>per maand</p>
+                    <h3>Bespaar</h3>
+                    <p>Totaal 400</p>
+                </a>
 
+                <a href="prices.html?pakket3" class="prices--card prices--card-small">
+                    <h3>12 maanden</h3>
+                    <h2>40</h2>
+                    <p>per maand</p>
+                    <h3>Bespaar</h3>
+                    <p>Totaal 400</p>
+                </a>
+            </section>
+        </section>
 
-     <div class="prices section" id="prices">
-      <div class="prices-mobile-header">
-        <div class="intro-title">
-          <h2>Prijzen</h2>
-        </div>
-<!--         <div class="prices--link-tablet">
-            <a href="prices.html">Bekijk alle pakketten</a>
-            <img src="https://img.icons8.com/metro/26/000000/chevron-right.png">
-        </div> -->
-      </div>
-      <div class="prices--card-container">
-      <div class="prices--card prices--card-big">
-        <h3>12 maanden</h3>
-        <h2>40</h2>
-        <p>per maand</p>
-        <h3>Bespaar</h3>
-        <p>Totaal 400</p>
-      </div>
-        <div class="prices--card prices--card-small">
-          <h3>12 maanden</h3>
-          <h2>40</h2>
-          <p>per maand</p>
-          <h3>Bespaar</h3>
-          <p>Totaal 400</p>
-        </div>
+        <section class="benefit section" id="benefit">
+            <section class="intro-title">
+                <h2>Voordelen</h2>
+            </section>
+            <section class="benefit--container">
+                <section class="benefit--row-container" id="benefit1" onclick="showBenefit()">
+                    <section class="benefit--row">
+                        <p>Goedgekeurd door verzekering</p>
+                        <img src="https://img.icons8.com/android/24/000000/chevron-down.png">
+                    </section>
+                    <section id=benefit1-content class="benefit--content hide">
+                        <p>Hier staat meer toelichting over het bovengenoemde voordeel maar dat heb ik nog niet bedacht want ik moet dit af hebben.</p>
+                    </section>
+                </section>
 
-        <div class="prices--card prices--card-small">
-          <h3>12 maanden</h3>
-          <h2>40</h2>
-          <p>per maand</p>
-          <h3>Bespaar</h3>
-          <p>Totaal 400</p>
-        </div>
-    </div>
+                <section class="benefit--row-container">
+                    <section class="benefit--row">
+                        <p>24/7 Camera toezicht</p>
+                        <img src="https://img.icons8.com/android/24/000000/chevron-down.png">
+                    </section>
+                    <section class="benefit--content hide">
+                        <p>Hier staat meer toelichting over het bovengenoemde voordeel maar dat heb ik nog niet bedacht want ik moet dit af hebben.</p>
+                    </section>
+                </section>
 
-    <!--    <div class="prices--link">
-        <a href="prices.html">Bekijk alle pakketten</a>
-        <img src="https://img.icons8.com/metro/26/000000/chevron-right.png">
-      </div> -->
-     </div>
- 
+                <section class="benefit--row-container">
+                    <section class="benefit--row">
+                        <p>Ankerpunt aan de muur</p>
+                        <img src="https://img.icons8.com/android/24/000000/chevron-down.png">
+                    </section>
+                    <section class="benefit--content benefit--content-hide">
+                        <p>Hier staat meer toelichting over het bovengenoemde voordeel maar dat heb ik nog niet bedacht want ik moet dit af hebben.</p>
+                    </section>
+                </section>
 
-     <div class="benefit section" id="benefit">
-       <div class="intro-title">
-         <h2>Voordelen</h2>
-       </div>
-      <div class="benefit--container">
-      <div class="benefit--row-container">
-        <div class="benefit--row">
-          <p>Goedgekeurd door verzekering</p>
-          <img src="https://img.icons8.com/android/24/000000/chevron-down.png">
-        </div>
-        <div class="benefit--content benefit--content-hide">
-          pelle het magere zwijntje
-        </div>
-      </div>
+                <section class="benefit--row-container">
+                    <section class="benefit--row">
+                        <p>Extra beveiliging tegen diefstal</p>
+                        <img src="https://img.icons8.com/android/24/000000/chevron-down.png">
+                    </section>
+                    <section class="benefit--content benefit--content-hide">
+                        <p>Hier staat meer toelichting over het bovengenoemde voordeel maar dat heb ik nog niet bedacht want ik moet dit af hebben.</p>
+                    </section>
+                </section>
 
+                <section class="benefit--row-container">
+                    <section class="benefit--row">
+                        <p>Bescherming tegen het weer</p>
+                        <img src="https://img.icons8.com/android/24/000000/chevron-down.png">
+                    </section>
+                    <section class="benefit--content benefit--content-hide">
+                        <p>Hier staat meer toelichting over het bovengenoemde voordeel maar dat heb ik nog niet bedacht want ik moet dit af hebben.</p>
+                    </section>
+                </section>
+            </section>
+        </section>
 
+        <button id="appearContactBtn" class="show" onclick="showContact()">Contact</button>
 
-      <div class="benefit--row-container">
-          <div class="benefit--row">
-            <p>24/7 Camera toezicht</p>
-            <img src="https://img.icons8.com/android/24/000000/chevron-down.png">
-          </div>
-          <div class="benefit--content benefit--content-hide">
-            pelle het magere zwijntje
-          </div>
-      </div>
+        <section class="contact section" id="contact">
+            <section class="intro-title">
+                <h2>Contact</h2>
+            </section>
+            <section class="intro-par">
+                Heeft u interesse of nog vragen? Vul dan hier de gegevens in en dan nemen wij z.s.m contact met u op.
+            </section>
+            <form class="contact-form">
+                <input placeholder="Uw naam..." name="name" class="contact--input" id="nameInput" type="text" required/>
+                <input placeholder="emailadres..." name="email" class="contact--input" id="emailInput" type="email" required/>
+                <input placeholder="telefoonnummer..." name="phone" class="contact--input" id="phoneInput" type="number" required/>
+                <textarea placeholder="Opmerkingen..." name="notes" class="contact--input" id="notesInput" required></textarea>
+                <input class="contact-btn" type="submit" value="Verstuur" />
+            </form>
+        </section>
+    </section>
+    </section>
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="./main.js"></script>
 
-        <div class="benefit--row-container">
-          <div class="benefit--row">
-            <p>Ankerpunt aan de muur</p>
-            <img src="https://img.icons8.com/android/24/000000/chevron-down.png">
-          </div>
-          <div class="benefit--content benefit--content-hide">
-            pelle het magere zwijntje
-          </div>
-        </div>
-
-          <div class="benefit--row-container">
-            <div class="benefit--row">
-              <p>Extra beveiliging tegen diefstal</p>
-              <img src="https://img.icons8.com/android/24/000000/chevron-down.png">
-            </div>
-            <div class="benefit--content benefit--content-hide">
-              pelle het magere zwijntje
-            </div>
-          </div>
-
-          <div class="benefit--row-container">
-            <div class="benefit--row">
-              <p>Bescherming tegen het weer</p>
-              <img src="https://img.icons8.com/android/24/000000/chevron-down.png">
-            </div>
-            <div class="benefit--content benefit--content-hide">
-              pelle het magere zwijntje
-            </div>
-          </div>
-        </div>
-     </div>
-
-     <button id="appearContactBtn" onclick="showContact()">Contact</button>
-
-     <div class="contact section" id="contact">	
-        <div class="intro-title">
-          <h2>Contact</h2>
-        </div>
-        <div class="intro-par">
-            Heeft u interesse of nog vragen? Vul dan hier de gegevens in en dan nemen wij z.s.m contact met u op.
-        </div>
-        <form class="contact-form">
-          <input placeholder="Uw naam..." name="name" class="contact--input" id="nameInput" type="text" required/>
-          <input placeholder="emailadres..." name="email" class="contact--input" id="emailInput" type="email" required/>
-          <input placeholder="telefoonnummer..." name="phone" class="contact--input" id="phoneInput" type="number" required/>
-          <textarea placeholder="Opmerkingen..." name="notes" class="contact--input" id="notesInput" required></textarea>
-          <input class="contact-btn" type="submit" value="Verstuur" />
-        </form>
-     </div>
-   </div>
-  </div>
-  </body>
 </html>
+<!-- Geholpen door Zenno Buinsma -->

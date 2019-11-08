@@ -1,64 +1,57 @@
 <html>
-  <head>
+
+<head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="./style.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <section class="container">
+        <section class="header">
+            <a href="index.html"><h1>Motor Staling</h1></a>
+            <p>Diemen</p>
+        </section>
+
+        <section class="info-container">
+            <section class="info-list">
+                <ul id="specs-list"></ul>
+            </section>
+            <section class="info-controller">
+                <p id="page-title"></p>
+                <select id="priceSelector" onChange="priceSelector()">
+                    <option data-math="1" value="1">3 maanden</option>
+                    <option data-math="2" value="2">6 maanden</option>
+                    <option data-math="3" value="3">12 maanden</option>
+                </select>
+                <br/>
+                <form>
+                    <section>
+                        <label>pakket 1</label>
+                        <input onclick="window.location.href='prices.html?pakket1';" type="radio" value="1" name="myRadios">
+                    </section>
+                    <section>
+                        <label>pakket 2</label>
+                        <input onclick="window.location.href='prices.html?pakket2';" type="radio" value="2" name="myRadios">
+                    </section>
+                    <section>
+                        <label>pakket 3</label>
+                        <input onclick="window.location.href='prices.html?pakket3';" type="radio" value="3" name="myRadios">
+                    </section>
+                </form>
+                <h2 id="price"></h2>
+            </section>
+
+        </section>
+
+    </section>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  </head>
-  <body>
 
+    <script src="./main.js"></script>
 
-   <div class="container">
-     <div class="header">
-     <a href="index.html"><h1>Motor Staling</h1></a>
-      <p>Diemen</p>
-    </div>
+</body>
 
-     <div class="prices section" id="prices">
-      <div class="prices-mobile-header">
-        <div class="intro-title">
-          <h2>prijzen</h2>
-        </div>
-        <div class="prices--link-tablet">
-            <a href="#">Bekijk alle pakketten</a>
-            <img src="https://img.icons8.com/metro/26/000000/chevron-right.png">
-        </div>
-      </div>
-      <div class="prices--card-container">
-      <div class="prices--card prices--card-big">
-        <h3>12 maanden</h3>
-        <h2>40</h2>
-        <p>per maand</p>
-        <h3>Bespaar</h3>
-        <p>Totaal 400</p>
-      </div>
-      <div class="prices-card-smal-container">
-        <div class="prices--card prices--card-small">
-          <h3>12 maanden</h3>
-          <h2>40</h2>
-          <p>per maand</p>
-          <h3>Bespaar</h3>
-          <p>Totaal 400</p>
-        </div>
+<script>
+</script>
 
-        <div class="prices--card prices--card-small">
-          <h3>12 maanden</h3>
-          <h2>40</h2>
-          <p>per maand</p>
-          <h3>Bespaar</h3>
-          <p>Totaal 400</p>
-        </div>
-      </div>
-    </div>
-    </div>
-
-  </div>
-  </body>
-
-  <script>
-    $(document).ready(function(){
-    $(".benefit--row").click(function() {
-      $( ".benefit--content" ).toggle("benefit--content-show");
-    });
-  });
-  </script>
 </html>
