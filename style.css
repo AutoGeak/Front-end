@@ -1,4 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto:300,400,700&display=swap');
+*,*:after,*:before{
+  box-sizing: border-box;
+}
 body {
   background: #FCF8F0;
   font-family: 'Roboto', sans-serif;
@@ -24,7 +27,7 @@ a {
   padding-left: 1em;
 }
 
-.benefit--content p {
+.benefit--content a {
   color: #41719F;
 }
 
@@ -156,6 +159,18 @@ h3 {
   color: #FCF8F0;
 }
 
+.prices--card-big:hover {
+border-style: solid;
+border-color: #8DCCFC;
+border-width: 1em;
+}
+
+.prices--card-small:hover {
+border-style: solid;
+border-color: #41719F;
+border-width: 1em;
+}
+
 .prices--card-big h3 {
   font-size: 9vw;
 }
@@ -203,10 +218,11 @@ h3 {
   align-items: center;
 }
 
-.benefit--row p {
+.benefit--row a {
   color: #8DCCFC;
   font-weight: bold;
   font-size: 1.3em;
+  margin: 1em;
 }
 
 .benefit--content {
@@ -262,8 +278,8 @@ h3 {
 
 #specs-list {
   list-style: none;
-  font-size: 2em;
-  text-align: right;
+  font-size: 1em;
+  text-align: center;
 }
 
 #specs-list li {
@@ -279,9 +295,66 @@ h3 {
 .info-container {
   margin-top: 30vh;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
+  flex-direction: column;
+  width: 100%;
 }
 
+.info-container > *{
+  flex-basis: 50%;
+  padding: 1rem 2rem;
+}
+
+
+#price{
+  color: #8DCCFC;
+  font-size: 4em;
+}
+
+input[type="radio"]{
+  display: none;
+}
+
+.label{
+  display: block;
+  width: 100%;
+  padding: 20px 30px;
+  margin-bottom: 20px;
+  text-transform: capitalize;
+  text-align: center;
+}
+
+.label-active {
+  background: #41719F;
+  color:white;
+}
+
+.label-inactive {
+  background: #D2ECFF;
+  color:#004a97;
+}
+
+input:checked + label{
+  background-color: blue;
+}
+
+input:hover + label{
+  background-color: #8DCCFC;
+}
+
+#priceSelector {
+  display: block;
+  height: 4em;
+  width: 100%;
+  max-width: 600px;
+  border: none;
+  background: #D2ECFF;
+  margin: 0 auto;
+  margin-top: 2em;
+  padding: 20px 30px;
+  text-align: center;
+}
+  
 @media (min-width: 768px) and (max-width: 1024px) {
   h1 {
     font-size: 3.5em;
@@ -293,7 +366,7 @@ h3 {
     display: block;
     margin-top: 0;
   }
-  .benefit--row p {
+  .benefit--row a {
     font-size: 2em;
   }
   .hero--info h2 {
@@ -343,6 +416,9 @@ h3 {
     margin-top: 15em;
     max-width: 60vw;
   }
+  #specs-list {
+  font-size: 2em;
+  }
   .prices--card-big h3 {
     font-size: 5vw;
   }
@@ -371,6 +447,22 @@ h3 {
     height: 44vw;
     background: #41719F;
   }
+  .info-container{
+    flex-direction: column;
+  }
+  #specs-list{
+    text-align: center;
+  }
+  .info-form{
+    display: flex;
+  }
+  .info-form section{
+    flex-basis: 33%;
+    margin-top: 0;
+  }
+  .label{
+    text-align: center;
+  }
 }
 
 @media screen and (min-width: 1024px) {
@@ -381,7 +473,7 @@ h3 {
     width: 60%;
     margin: auto;
   }
-  .benefit--row p {
+  .benefit--row a {
     font-size: 2em;
   }
   .contact-form {
@@ -448,11 +540,24 @@ h3 {
     max-height: 270px;
     background: #8DCCFC;
   }
+  #specs-list {
+    font-size: 2.5em;
+  }
   .prices--card-big {
     width: 26vw;
     max-width: 340px;
     height: 26vw;
     max-height: 340px;
     background: #41719F;
+  }
+  .info-container{
+    flex-direction: row;
+  }
+  .label,
+  #priceSelector{
+    text-align: left;
+  }
+  #specs-list{
+    text-align: right;
   }
 }
