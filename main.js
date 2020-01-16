@@ -69,7 +69,6 @@ if (params === 'pakket1') {
         li.innerHTML = li.innerHTML + p;
     });
 
-
 }
 
 if (params === 'pakket2') {
