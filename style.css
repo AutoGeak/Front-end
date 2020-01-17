@@ -172,7 +172,7 @@ border-width: 1em;
 }
 
 .prices--card-big h3 {
-  font-size: 9vw;
+  font-size: 7vw;
 }
 
 .prices--card-big p {
@@ -278,7 +278,7 @@ border-width: 1em;
 
 #specs-list {
   list-style: none;
-  font-size: 1em;
+  font-size: 2em;
   text-align: center;
 }
 
@@ -293,7 +293,7 @@ border-width: 1em;
 }
 
 .info-container {
-  margin-top: 30vh;
+  margin-top: 20vh;
   display: flex;
   justify-content: space-around;
   flex-direction: column;
@@ -318,8 +318,8 @@ input[type="radio"]{
 .label{
   display: block;
   width: 100%;
-  padding: 20px 30px;
-  margin-bottom: 20px;
+  padding: 1em 2em;
+  margin: 1em;
   text-transform: capitalize;
   text-align: center;
 }
@@ -351,7 +351,7 @@ input:hover + label{
   background: #D2ECFF;
   margin: 0 auto;
   margin-top: 2em;
-  padding: 20px 30px;
+  padding: 1em 2em;
   text-align: center;
 }
   
@@ -417,7 +417,7 @@ input:hover + label{
     max-width: 60vw;
   }
   #specs-list {
-  font-size: 2em;
+  font-size: 2.5em;
   }
   .prices--card-big h3 {
     font-size: 5vw;
@@ -540,9 +540,7 @@ input:hover + label{
     max-height: 270px;
     background: #8DCCFC;
   }
-  #specs-list {
-    font-size: 2.5em;
-  }
+
   .prices--card-big {
     width: 26vw;
     max-width: 340px;
@@ -551,6 +549,7 @@ input:hover + label{
     background: #41719F;
   }
   .info-container{
+    margin-top: 30vh;
     flex-direction: row;
   }
   .label,
@@ -559,5 +558,6 @@ input:hover + label{
   }
   #specs-list{
     text-align: right;
+    font-size: 2em;
   }
 }
