@@ -1,22 +1,21 @@
 <!DOCTYPE html>
 
-
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="./style.css" rel="stylesheet">
 
 </head>
 
-<body>
+<body class="page-home">
 
     <section class="container">
-        <header class="header">
+        <header>
             <h1>Motor Staling</h1>
             <p>Diemen</p>
             <nav class="nav">
-                <a id="price-btn" onclick="scrollToPrices()">Prijzen</a>
-                <a id="benefit-btn" onclick="scrollToBenefits()">Voordelen</a>
-                <a id="contact-btn" onclick="scrollToContact()">Contact</a>
+                <a id="price-btn">Prijzen</a>
+                <a id="benefit-btn">Voordelen</a>
+                <a id="contact-btn">Contact</a>
             </nav>
         </header>
 
@@ -63,16 +62,16 @@
         </section>
 
         <section class="benefit section" id="benefit">
-            <section class="intro-title">
+            <article class="intro-title">
                 <h2>Voordelen</h2>
-            </section>
+            </article>
             <section class="benefit--container">
-                <section class="benefit--row-container" id="benefit1" onclick="showBenefit()">
+                <section class="benefit--row-container" id="benefit1" > 
                     <section class="benefit--row">
                         <a>Goedgekeurd door verzekering</a>
                         <img src="https://img.icons8.com/android/24/000000/chevron-down.png">
                     </section>
-                    <section id=benefit1-content class="benefit--content hide">
+                    <section id=benefit1-content class="benefit--content">
                         <a>Hier staat meer toelichting over het bovengenoemde voordeel maar dat heb ik nog niet bedacht want ik moet dit af hebben.</a>
                     </section>
                 </section>
@@ -82,7 +81,7 @@
                         <a>24/7 Camera toezicht</a>
                         <img src="https://img.icons8.com/android/24/000000/chevron-down.png">
                     </section>
-                    <section class="benefit--content hide">
+                    <section class="benefit--content">
                         <a>Hier staat meer toelichting over het bovengenoemde voordeel maar dat heb ik nog niet bedacht want ik moet dit af hebben.</a>
                     </section>
                 </section>
@@ -92,7 +91,7 @@
                         <a>Ankerpunt aan de muur</a>
                         <img src="https://img.icons8.com/android/24/000000/chevron-down.png">
                     </section>
-                    <section class="benefit--content benefit--content-hide">
+                    <section class="benefit--content">
                         <a>Hier staat meer toelichting over het bovengenoemde voordeel maar dat heb ik nog niet bedacht want ik moet dit af hebben.</a>
                     </section>
                 </section>
@@ -102,7 +101,7 @@
                         <a>Extra beveiliging tegen diefstal</a>
                         <img src="https://img.icons8.com/android/24/000000/chevron-down.png">
                     </section>
-                    <section class="benefit--content benefit--content-hide">
+                    <section class="benefit--content">
                         <a>Hier staat meer toelichting over het bovengenoemde voordeel maar dat heb ik nog niet bedacht want ik moet dit af hebben.</a>
                     </section>
                 </section>
@@ -112,14 +111,14 @@
                         <a>Bescherming tegen het weer</a>
                         <img src="https://img.icons8.com/android/24/000000/chevron-down.png">
                     </section>
-                    <section class="benefit--content benefit--content-hide">
+                    <section class="benefit--content">
                         <p>Hier staat meer toelichting over het bovengenoemde voordeel maar dat heb ik nog niet bedacht want ik moet dit af hebben.</p>
                     </section>
                 </section>
             </section>
         </section>
 
-        <button id="appearContactBtn" class="show" onclick="showContact()">Contact</button>
+        <button id="appearContactBtn" class="">Contact</button>
 
         <section class="contact section" id="contact">
             <section class="intro-title">
@@ -138,8 +137,7 @@
         </section>
     </section>
 </body>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-<script src="./main.js"></script>
+<script src="./app.js"></script>
 
 </html>
-<!-- Geholpen door Zenno Buinsma -->
+<!-- Geholpen door Zenno Bruinsma -->

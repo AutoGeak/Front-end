@@ -106,11 +106,7 @@ if (params === 'pakket3') {
     });
 }
 
-$(".benefit--row").click(function() {
-    var content = $(this).next();
-    $(content).toggle();
-    $(content).next().toggle();
-    return false;
+0
 });
 
 function showBenefit() {

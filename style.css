@@ -1,7 +1,10 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto:300,400,700&display=swap');
-*,*:after,*:before{
+*,
+*:after,
+*:before {
   box-sizing: border-box;
 }
+
 body {
   background: #FCF8F0;
   font-family: 'Roboto', sans-serif;
@@ -34,13 +37,15 @@ a {
 .section {
   padding-top: 5vh;
 }
-
+.opties{
+  align-items: left;
+}
 .show {
   display: block !important;
 }
 
-.hide {
-  display: none;
+.hide .benefit--content {
+  display: block;
 }
 
 .intro-title {
@@ -56,7 +61,7 @@ a {
   width: 90%;
 }
 
-.header {
+header {
   text-align: center;
   position: fixed;
   width: 100%;
@@ -67,11 +72,11 @@ a {
   padding-bottom: 1vh;
 }
 
-.header h1 {
+header h1 {
   margin-bottom: 0;
 }
 
-.header p {
+header p {
   color: #41719F;
   margin-top: 0;
   margin-bottom: 1em;
@@ -160,15 +165,15 @@ h3 {
 }
 
 .prices--card-big:hover {
-border-style: solid;
-border-color: #8DCCFC;
-border-width: 1em;
+  border-style: solid;
+  border-color: #8DCCFC;
+  border-width: 1em;
 }
 
 .prices--card-small:hover {
-border-style: solid;
-border-color: #41719F;
-border-width: 1em;
+  border-style: solid;
+  border-color: #41719F;
+  border-width: 1em;
 }
 
 .prices--card-big h3 {
@@ -276,13 +281,18 @@ border-width: 1em;
   font-weight: bold;
 }
 
-#specs-list {
+#appearContactBtn.hide {
+  display: none;
+}
+
+.benefits {
   list-style: none;
   font-size: 2em;
   text-align: center;
 }
 
-#specs-list li {
+.benefits ol {
+  list-style: none;
   margin: 2vh 0;
   color: #41719F;
 }
@@ -292,7 +302,7 @@ border-width: 1em;
   margin: auto;
 }
 
-.info-container {
+main {
   margin-top: 20vh;
   display: flex;
   justify-content: space-around;
@@ -300,66 +310,58 @@ border-width: 1em;
   width: 100%;
 }
 
-.info-container > *{
+main>* {
   flex-basis: 50%;
   padding: 1rem 2rem;
 }
 
-
-#price{
+#price {
   color: #8DCCFC;
   font-size: 4em;
 }
 
-input[type="radio"]{
+input[type="radio"] {
   display: none;
 }
 
-.label{
+.label {
   display: block;
-  width: 100%;
+  width: 60vw;
   padding: 1em 2em;
-  margin: 1em;
+  margin: 1em auto; 
   text-transform: capitalize;
   text-align: center;
+  color: #41719F;
+  background-color: #D2ECFF
 }
 
-.label-active {
-  background: #41719F;
-  color:white;
+input:checked+label {
+  background-color: #41719F;
+  color: #FCF8F0;
 }
 
-.label-inactive {
-  background: #D2ECFF;
-  color:#004a97;
-}
-
-input:checked + label{
-  background-color: blue;
-}
-
-input:hover + label{
+input:hover+label {
   background-color: #8DCCFC;
+  color: #41719F;
 }
 
-#priceSelector {
+.duration {
   display: block;
   height: 4em;
-  width: 100%;
-  max-width: 600px;
+  width: 40vw;
   border: none;
   background: #D2ECFF;
-  margin: 0 auto;
-  margin-top: 2em;
+  margin: 1em auto;
+  margin-top: 4em;
   padding: 1em 2em;
   text-align: center;
 }
-  
+
 @media (min-width: 768px) and (max-width: 1024px) {
   h1 {
     font-size: 3.5em;
   }
-  .header p {
+  header p {
     font-size: 1.25em;
   }
   .hero--info {
@@ -369,6 +371,12 @@ input:hover + label{
   .benefit--row a {
     font-size: 2em;
   }
+
+.duration{
+  width: 26vw;
+  margin: auto;
+  margin-top: 4em;
+}
   .hero--info h2 {
     margin: 0;
   }
@@ -416,8 +424,8 @@ input:hover + label{
     margin-top: 15em;
     max-width: 60vw;
   }
-  #specs-list {
-  font-size: 2.5em;
+  .benefits {
+    font-size: 2.5em;
   }
   .prices--card-big h3 {
     font-size: 5vw;
@@ -447,26 +455,28 @@ input:hover + label{
     height: 44vw;
     background: #41719F;
   }
-  .info-container{
+  main {
     flex-direction: column;
   }
-  #specs-list{
+  .benefits {
     text-align: center;
   }
-  .info-form{
+  .packages {
     display: flex;
   }
-  .info-form section{
+  .info-form section {
     flex-basis: 33%;
     margin-top: 0;
   }
-  .label{
+  .label {
     text-align: center;
+    margin: 1em;
+
   }
 }
 
 @media screen and (min-width: 1024px) {
-  .header p {
+  header p {
     font-size: 1.5em;
   }
   .benefit--container {
@@ -540,7 +550,6 @@ input:hover + label{
     max-height: 270px;
     background: #8DCCFC;
   }
-
   .prices--card-big {
     width: 26vw;
     max-width: 340px;
@@ -548,16 +557,24 @@ input:hover + label{
     max-height: 340px;
     background: #41719F;
   }
-  .info-container{
+  main {
     margin-top: 30vh;
     flex-direction: row;
   }
   .label,
-  #priceSelector{
-    text-align: left;
+  .duration {
+    width: 400px;
+    text-align: center;
+    margin: 1em;
   }
-  #specs-list{
+  .benefits {
     text-align: right;
     font-size: 2em;
   }
+}
+
+.benefits ol.package-1 li:nth-child(4),
+.benefits ol.package-1 li:nth-child(5),
+.benefits ol.package-2 li:nth-child(5) {
+  display: none
 }
