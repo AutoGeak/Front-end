@@ -27,11 +27,16 @@ function scrollToSection( id ){
 
 // Voordelen
 
+//Hier maak ik de constante genaamd dealitems aan en geef ik dezelfde waarde als de benefit--row-container class vanuit mijn index.html pagina vervolgens zet ik deze in een list zodat ik deze kan doorlopen met een for loop.
 const dealItems = document.querySelectorAll('.benefit--row-container')
 
+// Hier gebruik ik een for loop om de 5 elementen in mij lijst een click function mee tegeven en deze op hide te zetten. 
 for (var i = 0 ; i < dealItems.length; i++) {
+	//Hier haal ik het item op waar de loop nu bij is
 	var item = dealItems[i]
+	//Hier maak ik een Eventlistner aan die iets moet triggeren bij een click
 	item.addEventListener('click',function(){
+		//Dit is het gene wat getriggerd moet worden in dit geval moet de class juist weergeven of verborgen worden
 		this.classList.toggle('hide')
 	})
 }
@@ -67,3 +72,4 @@ if(document.querySelector('.page-prices')){
 		pricingLabel.innerHTML = 40
 	})
 }
+// Geholpen door Zenno Bruinsma
